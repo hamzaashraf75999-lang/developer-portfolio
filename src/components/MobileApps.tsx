@@ -23,19 +23,19 @@ export default function MobileApps() {
           <div className="grid md:grid-cols-12 gap-8 items-center">
             {/* App Icon / Visual */}
             <div className="md:col-span-4 flex flex-col items-center justify-center">
-              <div className="relative group">
-                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-3xl bg-gradient-to-tr from-emerald-500 via-teal-500 to-indigo-600 p-1 shadow-xl shadow-emerald-500/20">
+              <div className="flex flex-col items-center">
+                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-3xl bg-gradient-to-tr from-emerald-500 via-teal-500 to-indigo-600 p-[2px] shadow-xl shadow-emerald-500/20 group-hover:shadow-emerald-500/30 transition-shadow">
                   <div className="w-full h-full bg-[#111118] rounded-[22px] flex flex-col items-center justify-center p-3 text-center">
-                    <svg className="w-12 h-12 text-emerald-400 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-12 h-12 text-emerald-400 mb-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
-                    <span className="text-[11px] font-bold tracking-tight text-zinc-200">TIMETABLE</span>
+                    <span className="text-[11px] font-bold tracking-widest text-zinc-200">TIMETABLE</span>
                   </div>
                 </div>
-                {/* Google Play badge tag */}
-                <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 px-2.5 py-0.5 bg-emerald-500/20 border border-emerald-500/40 rounded-full text-[10px] font-semibold text-emerald-300">
+                {/* Clean badge below app icon */}
+                <span className="mt-3 inline-block px-3 py-1 bg-emerald-500/15 border border-emerald-500/30 rounded-full text-[11px] font-semibold text-emerald-300">
                   Android App
-                </div>
+                </span>
               </div>
             </div>
 
