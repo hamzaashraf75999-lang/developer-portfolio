@@ -30,7 +30,7 @@ const projects: ProjectItem[] = [
     description:
       "A specialized portal tailored for managing Islamic study circles, student records, teacher allocations, and attendance tracking with modern authentication and clean dashboards.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
-    liveUrl: "https://stitch-quran-circles-management-system-76l6hlx5n.vercel.app/",
+    liveUrl: "https://stitch-quran-circles-management-sys.vercel.app/",
     gradient: "from-emerald-500 to-teal-500",
     features: [
       "Role-based dashboards for students & circle instructors",
