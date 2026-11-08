@@ -1,41 +1,39 @@
 export default function Footer() {
   return (
-    <footer className="relative border-t border-border bg-card/30">
+    <footer className="relative border-t border-[#27272a] bg-[#0c0c12]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid sm:grid-cols-3 gap-8 items-center">
-          {/* Logo / Name */}
+          {/* Logo / Brand */}
           <div>
             <a href="#" className="text-xl font-bold tracking-tight">
-              <span className="text-accent">Hamza</span>
-              <span className="text-muted">.dev</span>
+              <span className="text-indigo-400">Hamza</span>
+              <span className="text-zinc-400">.dev</span>
             </a>
-            <p className="text-sm text-muted mt-2">
-              Full-Stack Web &amp; Mobile Developer
+            <p className="text-xs text-zinc-400 mt-1.5">
+              Full-Stack Web &amp; Mobile Application Developer
             </p>
           </div>
 
-          {/* Quick Links */}
-          <div className="flex flex-wrap justify-center gap-4">
-            {["About", "Skills", "Projects", "Experience", "Contact"].map(
-              (link) => (
-                <a
-                  key={link}
-                  href={`#${link.toLowerCase()}`}
-                  className="text-sm text-muted hover:text-foreground transition-colors"
-                >
-                  {link}
-                </a>
-              )
-            )}
+          {/* Quick Nav Links */}
+          <div className="flex flex-wrap justify-center gap-4 text-xs font-medium text-zinc-400">
+            {["About", "Skills", "Projects", "Mobile Apps", "Contact"].map((link) => (
+              <a
+                key={link}
+                href={`#${link.toLowerCase().replace(" ", "-")}`}
+                className="hover:text-zinc-100 transition-colors"
+              >
+                {link}
+              </a>
+            ))}
           </div>
 
-          {/* Social Links */}
-          <div className="flex justify-end gap-3">
+          {/* Social Icons */}
+          <div className="flex justify-start sm:justify-end gap-3">
             <a
-              href="https://github.com/hamzaashraf"
+              href="https://github.com/hamza-apps-dev"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-border text-muted hover:text-foreground hover:border-accent/30 hover:bg-accent/5 transition-all"
+              className="w-9 h-9 flex items-center justify-center rounded-xl bg-white/5 border border-[#27272a] text-zinc-400 hover:text-zinc-100 hover:border-indigo-500/40 hover:bg-indigo-500/10 transition-all"
               aria-label="GitHub"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -43,10 +41,10 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="https://linkedin.com/in/hamzaashraf"
+              href="https://www.linkedin.com/in/hamza-ashraf-75224b383/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-border text-muted hover:text-foreground hover:border-accent/30 hover:bg-accent/5 transition-all"
+              className="w-9 h-9 flex items-center justify-center rounded-xl bg-white/5 border border-[#27272a] text-zinc-400 hover:text-zinc-100 hover:border-indigo-500/40 hover:bg-indigo-500/10 transition-all"
               aria-label="LinkedIn"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -54,8 +52,8 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="mailto:hamza@example.com"
-              className="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-border text-muted hover:text-foreground hover:border-accent/30 hover:bg-accent/5 transition-all"
+              href="mailto:hamzaashraf75999@gmail.com"
+              className="w-9 h-9 flex items-center justify-center rounded-xl bg-white/5 border border-[#27272a] text-zinc-400 hover:text-zinc-100 hover:border-indigo-500/40 hover:bg-indigo-500/10 transition-all"
               aria-label="Email"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -65,16 +63,13 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="mt-8 pt-8 border-t border-border text-center">
-          <p className="text-sm text-muted">
-            &copy; 2026 Hamza Ashraf. All rights reserved. Built with{" "}
-            <span className="text-accent">Next.js</span> &amp;{" "}
-            <span className="text-accent">Tailwind CSS</span>.
+        {/* Copyright notice */}
+        <div className="mt-8 pt-8 border-t border-[#27272a] text-center">
+          <p className="text-xs sm:text-sm text-zinc-400">
+            &copy; 2026 Hamza Ashraf. All rights reserved.
           </p>
         </div>
       </div>
     </footer>
   );
 }
-

@@ -6,6 +6,7 @@ const navLinks = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
+  { label: "Mobile Apps", href: "#mobile-apps" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];
@@ -35,7 +36,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border shadow-lg shadow-black/10"
+          ? "bg-[#0a0a0f]/85 backdrop-blur-xl border-b border-[#27272a] shadow-lg shadow-black/30"
           : "bg-transparent"
       }`}
     >
@@ -48,10 +49,10 @@ export default function Navbar() {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
-            className="text-xl font-bold tracking-tight"
+            className="text-xl font-bold tracking-tight group"
           >
-            <span className="text-accent">Hamza</span>
-            <span className="text-muted">.dev</span>
+            <span className="text-indigo-400 group-hover:text-indigo-300 transition-colors">Hamza</span>
+            <span className="text-zinc-400">.dev</span>
           </a>
 
           {/* Desktop Links */}
@@ -61,24 +62,23 @@ export default function Navbar() {
                 key={link.label}
                 href={link.href}
                 onClick={(e) => handleClick(e, link.href)}
-                className="px-3 py-2 text-sm text-muted hover:text-foreground transition-colors duration-200 rounded-lg hover:bg-white/5"
+                className="px-3 py-2 text-sm text-zinc-400 hover:text-zinc-100 transition-colors duration-200 rounded-lg hover:bg-white/5"
               >
                 {link.label}
               </a>
             ))}
             <a
-              href="#contact"
-              onClick={(e) => handleClick(e, "#contact")}
-              className="ml-2 px-4 py-2 text-sm font-medium bg-accent hover:bg-accent-hover text-white rounded-lg transition-all duration-200"
+              href="mailto:hamzaashraf75999@gmail.com"
+              className="ml-3 px-4 py-2 text-sm font-medium bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg transition-all duration-200 shadow-md shadow-indigo-600/20"
             >
-              Hire Me
+              Get in Touch
             </a>
           </div>
 
           {/* Mobile Hamburger */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-muted hover:text-foreground transition-colors"
+            className="md:hidden p-2 text-zinc-400 hover:text-zinc-100 transition-colors"
             aria-label="Toggle menu"
           >
             <svg
@@ -113,27 +113,25 @@ export default function Navbar() {
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="bg-background/95 backdrop-blur-xl border-b border-border px-4 pb-4 space-y-1">
+        <div className="bg-[#0a0a0f]/95 backdrop-blur-2xl border-b border-[#27272a] px-4 pb-4 space-y-1">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
               onClick={(e) => handleClick(e, link.href)}
-              className="block px-3 py-2.5 text-sm text-muted hover:text-foreground hover:bg-white/5 rounded-lg transition-colors"
+              className="block px-3 py-2.5 text-sm text-zinc-400 hover:text-zinc-100 hover:bg-white/5 rounded-lg transition-colors"
             >
               {link.label}
             </a>
           ))}
           <a
-            href="#contact"
-            onClick={(e) => handleClick(e, "#contact")}
-            className="block px-3 py-2.5 text-sm font-medium text-center bg-accent hover:bg-accent-hover text-white rounded-lg transition-all mt-2"
+            href="mailto:hamzaashraf75999@gmail.com"
+            className="block px-3 py-2.5 text-sm font-medium text-center bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg transition-all mt-2"
           >
-            Hire Me
+            Get in Touch
           </a>
         </div>
       </div>
     </nav>
   );
 }
-
